@@ -1,23 +1,25 @@
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "../node_modules/react-router-dom/dist/index";
 import "./App.css";
-import About from "./components/About";
-import Contact from "./components/Contact";
+
 import Footer from "./components/Footer";
+import Gallery from "./pages/Gallery";
 import Header from "./components/Header";
-import Plans from "./components/Plans";
-import Reason from "./components/Reason";
-import Welcome from "./components/Welcome";
+import Homepage from "./pages/Homepage";
 
 function App() {
   return (
-    <>
+    <Router>
       <Header />
-      <Welcome />
-      <About />
-      <Reason />
-      <Plans />
-      <Contact />
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/gallery" element={<Gallery />} />
+      </Routes>
       <Footer />
-    </>
+    </Router>
   );
 }
 

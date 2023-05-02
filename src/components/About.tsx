@@ -22,7 +22,7 @@ function About() {
         <img
           src={image}
           alt="About SM"
-          style={{ width: "500px", height: "300px" }}
+          style={{ width: "400px", height: "300px" }}
         />
       </div>
     </>

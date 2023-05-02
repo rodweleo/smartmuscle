@@ -14,6 +14,9 @@
   -webkit-text-size-adjust: 100%;
 }
 
+img{
+  border-radius: 10px;
+}
 
 label{
   color: white;
@@ -61,8 +64,16 @@ nav>.bars{
   background:black;
   color: #fff;
   padding: 10px;
+  justify-content: center;  
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
+.welcome>button{
+  align-self: center;
+  width: fit-content;
+}
 .about{
   width: 100%;
   display: flex;
@@ -205,6 +216,49 @@ form input[type="text"],input[type="email"], textarea{
   width: 200px;
 }
 
+.form>div{
+  padding: 10px;
+}
+.form>div>ul{
+  list-style: none;
+  padding: 0;
+  line-height: 5vh;
+}
+
+
+.form>div>p{
+  max-width: 500px;
+}
+.form{
+  display: flex;
+  flex-wrap: wrap;
+  color: black;
+  justify-content: space-around;
+  background-color: grey;
+  border-radius: 5px;
+}
+
+
+.trainers{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.trainer{
+  width: 300px;
+}
+.trainer>p{
+  width: auto;
+  color: white;
+  text-align: justify;
+}
+
+.pictures{
+  display: flex;
+  gap: 20px;
+  overflow-x: scroll;
+}
 
 @media (prefers-color-scheme: light) {
   :root {
@@ -220,25 +274,24 @@ form input[type="text"],input[type="email"], textarea{
 }
 
 @media screen and (max-width: 650px) {
+
   nav>ul{
-    
     display: none;
   }
 
   nav>ul.active{
-    position: absolute;
-    top: 13%;
+    display: flex;
+    flex-direction: column;position: absolute;
+    top: 80%;
     width: 100%;
     left: 0;
     text-align: center;
-    height: auto;
     background-color: black;
     display: flex;
     flex-direction: column;
     line-height: 5vh;
   }
-
   nav>.bars{
-    display: block;
+    display:block;
   }
 }
